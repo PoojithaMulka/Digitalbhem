@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div align="center" class="container">
+    <form id="registerForm">
+
+      <div id="title">
+        <h1>HOTEL REGISTRATION FORM</h1>
+      </div>
+      <!--CUSTOMER INFORMATION-->
+      <div class="form-group">
+        <h2>CUSTOMER INFORMATION</h2>
+        <label>Customer name :
+          <input type="text" id="name" class="input" placeholder="Enter customer name" />
+        </label>
+        <br>
+        <label>Check-in date :
+          <input type="date" id="date" class="input" />
+        </label>
+        <br>
+        <label>Total no.of days :
+          <input type="number" id="days" class="input" placeholder="Enter no.of days" min="1" />
+        </label>
+        <br>
+        <label>Total no.of persons :
+          <input type="number" id="persons" class="input" placeholder="Enter no.of persons" min="1" />
+        </label>
+        <br>
+      </div>
+      <!--ROOMTYPES-->
+      <div id="roomtype">
+        <h2>ROOM TYPE</h2>
+        <div class="room">
+          <img src="proimages/delux.jpg" alt="Delux Room" class="img" />
+          <br><br>
+          <label for="deluxroom">
+            <input type="radio" id="deluxroom" name="room" value="deluxRoom">
+            Delux Room
+          </label>
+        </div>
+        <div class="room">
+          <img src="proimages/suiteroom.jpg" alt="Suite Room" class="img" />
+          <br><br>
+          <label for="suiteroom">
+            <input type="radio" id="suiteroom" name="room" value="suiteRoom">
+            Suite Room
+          </label>
+        </div>
+      </div>
+      <br>
+
+      <!--AMENITIES-->
+
+      <div id="amenities">
+        <h2>AMENITIES</h2>
+        <div class="amenities">
+          <img src="proimages/ac.jpg" alt="AC" class="img" />
+          <br><br>
+          <label>
+            <input type="checkbox" id="ac" name="amenities" value="AC">
+            AC
+          </label>
+        </div>
+        <div class="amenities">
+          <img src="proimages/locker.jpg" alt="Locker" class="img" />
+          <br><br>
+          <label>
+            <input type="checkbox" id="locker" name="amenities" value="Locker">
+            Locker
+          </label>
+        </div>
+      </div>
+      <!--ADVANCE AMOUNT-->
+      <div class="form-group">
+        <label>Advance amount :
+          <input type="number" id="advancePayment" name="advancePayment" min="0" required>
+        </label>
+
+      </div>
+      <div class="form-group button-container">
+        <button type="submit" id="button" class="register">Register</button>
+      </div>
+      <br>
+    </form>
+    <br><br>
+
+    <!-- OUTPUT-->
+    <div id="output">
+      <h3><em>Your Registration was successful!</em></h3>
+      <h2><em>Your transaction details</em></h2>
+      <div class="form-group">
+        <label>Customer Name :</label>
+        <span id="customer-name" class="amount"></span>
+      </div>
+      <div class="form-group">
+        <label>Check-In-Date :</label>
+        <span id="check-in-date" class="amount"></span>
+      </div>
+      <div class="form-group">
+        <label>Total Dayst:</label>
+        <span id="total-days" class="amount"></span>
+      </div>
+      <div class="form-group">
+        <label>Total Persons:</label>
+        <span id="total-persons" class="amount"></span>
+      </div>
+      <div class="form-group">
+        <label>Total Amount:</label>
+        <span id="total-cost" class="amount"></span>
+      </div>
+      <div class="form-group">
+        <label>Advance Amount:</label>
+        <span id="advance-amount" class="amount"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Room Cost:</label>
+        <span id="total-room-cost" class="amount"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Amenities Cost:</label>
+        <span id="total-amenities-cost" class="amount"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Extra Persons Cost:</label>
+        <span id="additional-charges" class="amount"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Balance Amount:</label>
+        <span id="balance" class="amount"></span>
+      </div>
+      <h2><em>THANK YOU FOR REGISTERING !! HAVE A JOY DAY</em></h2>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
